@@ -1,1 +1,1 @@
-# Porjet-Wiki-minecraft
+# Projet-Wiki-minecraft
