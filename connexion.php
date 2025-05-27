@@ -30,15 +30,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class= box>
-    <form method="POST">
+<form method="POST">
+	<div class= box>
         Pseudo : <input type="text" name="pseudo" required><br>
 	<br>
         Mot de passe : <input type="password" name="mot_de_passe" required><br>
 	<br>
         <input type="submit" value="Se connecter">
-	<?= $MessageErreur ?>
+	</div>
+	<?php if (!empty($MessageErreur)) : ?>
+    		<div class="box2">
+        	<?= $MessageErreur ?>
+    		</div>
+    	<?php endif; ?>
     </form>
-</div>
+
 </body>
 </html>
