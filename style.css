@@ -1,1 +1,21 @@
+body {
+  margin: 0;
+  height: 100 vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+	background-image: url("fond_connexion.jpg");
+	color: black;
+	justify-content: center;
+  align-items: center;
+	text-align: center;
+	display: flex;
+}
 
+.box {
+    background: #ccc;
+    width: 300 px;
+    margin: 100 px; 
+    padding: 20 px;
+    border-radius: 5 px;
+}
