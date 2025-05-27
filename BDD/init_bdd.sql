@@ -8,5 +8,4 @@ CREATE TABLE IF NOT EXISTS utilisateurs (
     email VARCHAR(150) NOT NULL UNIQUE,
     mot_de_passe VARCHAR(255) NOT NULL,
     role ENUM('utilisateur', 'admin') DEFAULT 'utilisateur',
-    date_inscription DATETIME DEFAULT CURRENT_TIMESTAMP
 );
