@@ -1,21 +1,193 @@
-body {
-  margin: 0;
-  height: 100 vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-	background-image: url("fond_connexion.jpg");
-	color: black;
-	justify-content: center;
-  align-items: center;
-	text-align: center;
-	display: flex;
-}
-
 .box {
     background: #ccc;
     width: 300 px;
     margin: 100 px; 
     padding: 20 px;
     border-radius: 5 px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url('fond jour.webp');
+    background-size: cover;
+    
+}
+
+header {
+    max-width: 700px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border-radius: 8px;
+    padding: 15px 20px;
+    color: #222222;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.logo {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+nav {
+    display: flex;
+    gap: 7px;
+    width: 100%;
+}
+nav a {
+    background-color: #00c911;
+    color: rgb(16, 44, 0);
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: fit-content;
+}
+nav a:hover {
+    background-color: #008116;
+}
+main {
+    flex: 1;
+    padding: 20px;
+    max-width: 700px; 
+    margin: 20px auto; 
+    background-color: #ffffff; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border-radius: 8px;
+    color: #222222;
+}
+section {
+    margin-bottom: 30px;
+}
+.top-link {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0066cc;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+}
+.top-link:hover {
+    background-color: #0052a3;
+}
+footer {
+    background-color: #f0f0f0;
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #555;
+}
+footer a {
+    color: #004080;
+    text-decoration: none;
+    margin: 0 10px;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+.fixed-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.15);
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 1100;
+}
+.connexion-btn {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.connexion-btn:hover {
+    background-color: #004a99;
+}
+
+.inscription-btn {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.inscription-btn:hover {
+    background-color: #004a99;
+}
+
+input {
+    appearance: none;
+    position: absolute;
+}
+
+.switch span {
+    display: block;
+    width: 40px;
+    height: 20px;
+    background: #ddd;
+    border-radius: 20px;
+    transition: 0.3s;
+    position: relative;
+    cursor: pointer;
+}
+
+span::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border-radius: 50%;
+    margin: 2px;
+    transition: 0.3s;
+}
+
+input:checked+span {
+    background: #4ecdc4;
+}
+
+input:checked+span::before {
+    transform: translateX(20px);
+}
+
+.night-mode {
+    background-image: url('fond nuit.webp');
+    background-size: cover;
+}
+
+body.night-mode header {
+    background-color: #333333;
+    color: #f0f0f0;
+    box-shadow: 0 0 10px rgba(255,255,255,0.2);
+}
+
+body.night-mode main {
+    background-color: #444444;
+    color: #f0f0f0;
+    box-shadow: 0 0 10px rgba(255,255,255,0.2);
 }
