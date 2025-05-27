@@ -2,6 +2,7 @@
 <?php
 session_start();
 require 'config.php';
+$MessageErreur = "";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $pseudo = $_POST['pseudo'];
@@ -26,32 +27,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
 <meta charset="UTF-8">
 	<title>Connexion</title>
-	<style>
-        	body { 
-  			margin: 0;     /* Enlève les marges par défaut */
-  			height: 100vh; /* Prend 100% de la hauteur de la fenêtre */
-  			background-size: cover;    /* L’image couvre toute la zone */
-  			background-position: center; /* Centrée */
-  			background-repeat: no-repeat;
-			background-image: url("./images/fond_connexion.jpg");
-			color: black;
-			justify-content: center;   /* centrage horizontal */
-      			align-items: center;       /* centrage vertical */
-			text-align: center;
-			display: flex;
-		}
-		.box {
-      			background: #ccc;
-      			width: 300px;
-      			margin: 100px; 
-      			padding: 20px;
-      			border-radius: 5px;
-    		}
-	</style>
+	<link rel="stylesheet" href="style.css">
 </head>
+<body>
 <div class= box>
-    <form method="POST" action="connexion.php">
-        Nom d’utilisateur : <input type="text" name="pseudo" required><br>
+    <form method="POST">
+        Pseudo : <input type="text" name="pseudo" required><br>
 	<br>
         Mot de passe : <input type="password" name="mot_de_passe" required><br>
 	<br>
