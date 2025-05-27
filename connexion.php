@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     if ($utilisateur && password_verify($mot_de_passe, $utilisateur["mot_de_passe"])) {
         $_SESSION["utilisateur"] = $utilisateur;
-        header("Location: dashboard.php");
+        header("Location: index.php");
         exit();
     } else {
         $MessageErreur = "<p style='color:red;'>Identifiants incorrects</p>";
