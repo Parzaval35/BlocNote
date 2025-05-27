@@ -1,8 +1,3 @@
-<form method="POST">
-    <input type="text" name="pseudo" placeholder="Pseudo" required>
-    <input type="password" name="mot_de_passe" placeholder="Mot de passe" required>
-    <button type="submit">Se connecter</button>
-</form>
 
 <?php
 session_start();
