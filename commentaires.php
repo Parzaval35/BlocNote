@@ -32,6 +32,7 @@ $commentaires = $stmt->fetchAll();
 <body>
 <div class="box">
 <h2>Liste des commentaires :</h2>
+<section class="comment-section" id="commentaires">	
 <ul>
 <?php foreach ($commentaires as $commentaire): ?>
     <?php if ($commentaire["id_parent"] === null): ?>
@@ -49,7 +50,7 @@ $commentaires = $stmt->fetchAll();
             <?php endforeach; ?>
 
             <!-- Lien Répondre -->
-            <a href="?repondre=<?= $commentaire['id_commentaire'] ?>">Répondre</a>
+            <a href="?repondre=<?= $commentaire['id_commentaire']#commentaires ?>">Répondre</a>
 
             <!-- Formulaire réponse -->
             <?php if (isset($_GET["repondre"]) && $_GET["repondre"] == $commentaire['id_commentaire']): ?>
@@ -71,7 +72,7 @@ $commentaires = $stmt->fetchAll();
 </ul>
 
 <!-- Ajouter un commentaire principal -->
-<a href="?ajouter=1">Ajouter un commentaire</a>
+<a href="?ajouter=1#commentaires">Ajouter un commentaire</a>
 
 <?php if (isset($_GET["ajouter"])): ?>
     <?php if ($isConnected): ?>
