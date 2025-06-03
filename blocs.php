@@ -139,7 +139,7 @@ $commentaires = $stmt->fetchAll();
 
     <article class="mob">
       <h3>Fer</h3>
-      <img src="images/fer.png" alt="Minerai de fer" class="mob-img">
+      <img src="images/fer.webp" alt="Minerai de fer" class="mob-img">
       <ul>
         <li><strong>Obtention :</strong> Miné avec une pioche en pierre ou supérieure.</li>
         <li><strong>Utilisation :</strong> Fonte pour obtenir du fer utilisable en crafting.</li>
