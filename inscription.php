@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt = $pdo->prepare("INSERT INTO utilisateurs (pseudo, email, mot_de_passe) VALUES (?, ?, ?)");
         $stmt->execute([$pseudo, $email, $mot_de_passe]);
         $Message = "<p style='color:green;'>Inscription réussie!</p>";
-	echo '<meta http-equiv="refresh" content="3;url=index.php">';
+	      echo '<meta http-equiv="refresh" content="3;url=index.php">';
     } catch (PDOException $e) {
         $Message = "<p style='color:red;'>Erreur : " . $e->getMessage() . "</p>";
     }
@@ -38,8 +38,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <input type="password" id="mot_de_passe" name="mot_de_passe" autocomplete="new-password" required>
       </div>
       <div class="form-group">
-        <label for="mail">E-mail :</label>
-        <input type="email" id="email" name="mail" autocomplete="email" required>
+        <label for="email">E-mail :</label>
+        <input type="email" id="email" name="email" autocomplete="email" required>
       </div>
 
       <?php if (!empty($Message)) : ?>
