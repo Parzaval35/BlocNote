@@ -20,8 +20,8 @@
         <nav>
             <a href="index.php">Home</a>
             <a href="Maj.php">Dernières MàJ</a>
-            <a href="#block">Block</a>
-            <a href="Creatures.html">Mob</a>
+            <a href="blocs.php">Block</a>
+            <a href="creatures.php">Mob</a>
             <a href="#tutoriels">Tutoriels</a>
         </nav>
     </header>
