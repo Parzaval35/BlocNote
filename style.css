@@ -21,7 +21,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;  
-    background-image: url('images/fond jour.webp');
+    background-image: url('fond jour.webp');
     background-size: cover;          
     background-repeat: no-repeat;
     background-position: center top;   /* ou "center center" */
@@ -187,10 +187,9 @@ input:checked+span::before {
     transform: translateX(20px);
 }
 
-.night-mode {
-    background-image: url('images/fond nuit.webp');
+body.night-mode {
+    background-image: url('fond nuit.webp');
     background-size: cover;
-    logo: url('images/dark_logo');
 }
 
 body.night-mode header {
@@ -203,4 +202,22 @@ body.night-mode main {
     background-color: #444444;
     color: #f0f0f0;
     box-shadow: 0 0 10px rgba(255,255,255,0.2);
+}
+
+body.night-mode .fixed-menu {
+    background-color: #444444;
+    color: #f0f0f0;
+    box-shadow: 0 0 10px rgba(255,255,255,0.2);
+}
+
+body.night-mode footer {
+    background-color: #444444;
+    color: #f0f0f0;
+    box-shadow: 0 0 10px rgba(255,255,255,0.2);
+}
+
+body.night-mode footer a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
 }
