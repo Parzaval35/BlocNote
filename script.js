@@ -13,3 +13,11 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+const buttons = document.querySelectorAll(".accordion-btn");
+buttons.forEach((btn) => {
+btn.addEventListener("click", () => {
+        const panel = btn.nextElementSibling;
+        panel.classList.toggle("open");
+  });
+});
