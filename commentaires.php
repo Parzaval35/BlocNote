@@ -86,5 +86,6 @@ $commentaires = $stmt->fetchAll();
     <?php endif; ?>
 <?php endif; ?>
 </div>
+</section>
 </body>
 </html>
