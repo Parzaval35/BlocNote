@@ -8,8 +8,8 @@
 </head>
 <body>
     <div class="fixed-menu">
-        <button class="connexion-btn" href="connexion.php">Connexion</button>
-        <button class="inscription-btn" href="inscription.php">Inscription</button>
+        <button onclick="window.location.href='connexion.php'">Connexion</button>
+        <button onclick="window.location.href='inscription.php'">Inscription</button>
         <label class="switch">
             <input type="checkbox" id="nightModeCheckbox">
             <span></span>
