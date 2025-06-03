@@ -7,17 +7,17 @@ $isConnected = isset($_SESSION["utilisateur_id"]);
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["commentaire"])) {
     $contenu = $_POST["commentaire"];
     $id_parent = !empty($_POST["id_parent"]) ? intval($_POST["id_parent"]) : null;
+    $id_page=$_POST["id_page"];
+    $stmt = $pdo->prepare("INSERT INTO commentaires (id_utilisateur, contenu, id_parent,id_page) VALUES (?, ?, ?,?)");
+    $stmt->execute([$_SESSION["utilisateur_id"], $contenu, $id_parent,$id_page]);
 
-    $stmt = $pdo->prepare("INSERT INTO commentaires (id_utilisateur, contenu, id_parent) VALUES (?, ?, ?)");
-    $stmt->execute([$_SESSION["utilisateur_id"], $contenu, $id_parent]);
-
-    header("Location: " . $_SERVER['PHP_SELF']);
+    header("Location: " . $_SERVER['PHP_SELF'] . "?id_page=$id_page");
     exit();
 }
 
 // Récupération des commentaires
 $sql = "SELECT commentaires.*, utilisateurs.pseudo FROM commentaires 
-        JOIN utilisateurs ON commentaires.id_utilisateur = utilisateurs.id 
+        JOIN utilisateurs ON commentaires.id_utilisateur = utilisateurs.id WHERE commentaires.id_page =2
         ORDER BY commentaires.id_commentaire ASC";
 $stmt = $pdo->query($sql);
 $commentaires = $stmt->fetchAll();
@@ -132,6 +132,53 @@ $commentaires = $stmt->fetchAll();
   </div>
 </div>
 
+<button class="accordion-btn">⛏️ Minerais</button>
+<div class="category-panel">
+  <div class="category">
+    <p>Ces blocs contiennent des ressources précieuses que tu peux miner pour fabriquer outils, armures, et plus.</p>
+
+    <article class="mob">
+      <h3>Fer</h3>
+      <img src="images/fer.png" alt="Minerai de fer" class="mob-img">
+      <ul>
+        <li><strong>Obtention :</strong> Miné avec une pioche en pierre ou supérieure.</li>
+        <li><strong>Utilisation :</strong> Fonte pour obtenir du fer utilisable en crafting.</li>
+        <li><strong>Résistance :</strong> Moyenne.</li>
+      </ul>
+    </article>
+
+    <article class="mob">
+      <h3>Diamant</h3>
+      <img src="images/diamant.png" alt="Minerai de diamant" class="mob-img">
+      <ul>
+        <li><strong>Obtention :</strong> Miné avec une pioche en fer ou supérieure.</li>
+        <li><strong>Utilisation :</strong> Fabrication des outils et armures les plus résistants.</li>
+        <li><strong>Résistance :</strong> Bonne.</li>
+      </ul>
+    </article>
+
+    <article class="mob">
+      <h3>Or</h3>
+      <img src="images/or.webp" alt="Minerai d’or" class="mob-img">
+      <ul>
+        <li><strong>Obtention :</strong> Miné avec une pioche en fer ou supérieure.</li>
+        <li><strong>Utilisation :</strong> Fonte pour obtenir de l’or, utilisé en objets décoratifs et redstone.</li>
+        <li><strong>Résistance :</strong> Moyenne.</li>
+      </ul>
+    </article>
+
+    <article class="mob">
+      <h3>Charbon</h3>
+      <img src="images/charbon.png" alt="Minerai de charbon" class="mob-img">
+      <ul>
+        <li><strong>Obtention :</strong> Miné avec n’importe quelle pioche.</li>
+        <li><strong>Utilisation :</strong> Combustible pour fours, crafting de torches.</li>
+        <li><strong>Résistance :</strong> Faible.</li>
+      </ul>
+    </article>
+  </div>
+</div>
+
 <button class="accordion-btn">⚙️ Blocs Utilitaires</button>
 <div class="category-panel">
   <div class="category">
@@ -164,20 +211,20 @@ $commentaires = $stmt->fetchAll();
 <?php foreach ($commentaires as $commentaire): ?>
     <?php if ($commentaire["id_parent"] === null): ?>
         <li>
-            <strong>Commentaire de <?= $commentaire["pseudo"] ?></strong><br><?= $commentaire["contenu"] ?>
+            <strong>Commentaire de <?= $commentaire["pseudo"] ?> : </strong><br><?= $commentaire["contenu"] ?>
             <br>
             <!-- Affichage des réponses -->
             <?php foreach ($commentaires as $reponse): ?>
                 <?php if ($reponse["id_parent"] == $commentaire["id_commentaire"]): ?>
                     <div style="margin-left:30px;">
-                        Réponse de <?= $reponse["pseudo"] ?><br><?= $reponse["contenu"] ?>
+                        Réponse de <?= $reponse["pseudo"] ?> : <br><?= $reponse["contenu"] ?>
 			<br>
                     </div>
                 <?php endif; ?>
             <?php endforeach; ?>
 
             <!-- Lien Répondre -->
-            <a href="?repondre=<?= $commentaire['id_commentaire'] ?>#commentaires">Répondre</a>
+            <a href="?repondre=<?= $commentaire['id_commentaire'] ?>&id_page=<?= $id_page ?>#commentaires">Répondre</a>
 
             <!-- Formulaire réponse -->
             <?php if (isset($_GET["repondre"]) && $_GET["repondre"] == $commentaire['id_commentaire']): ?>
@@ -200,12 +247,13 @@ $commentaires = $stmt->fetchAll();
 
 
 <!-- Ajouter un commentaire principal -->
-<a href="?ajouter=1#commentaires">Ajouter un commentaire</a>
+<a href="?ajouter=1&id_page=<?= $id_page ?>#commentaires">Ajouter un commentaire</a>
 
 <?php if (isset($_GET["ajouter"])): ?>
     <?php if ($isConnected): ?>
         <form method="post">
             <input type="hidden" name="id_parent" value="">
+	    <input type="hidden" name="id_page" value="2">
             <textarea name="commentaire" required></textarea><br>
             <button type="submit">Publier le commentaire</button>
         </form>
