@@ -351,6 +351,7 @@ $commentaires = $stmt->fetchAll();
 <?php endif; ?>
 
 </section>
+  <a href="#" class="top-link">Retour en haut</a>
   </main>
 
     <footer>
