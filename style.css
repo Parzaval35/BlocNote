@@ -358,3 +358,18 @@ body.night-mode .maj {
     color: #f0f0f0;
     box-shadow: 0 0 10px rgba(78, 205, 196, 0.7);
 }
+
+body.night-mode .comment-section {
+    background-color: #222;
+    color: #ddd;
+}
+
+.comment-section {
+    display:block;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    color: #333;
+}
