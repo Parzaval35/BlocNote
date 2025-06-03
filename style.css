@@ -373,3 +373,68 @@ body.night-mode .comment-section {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     color: #333;
 }
+
+.tutorial-list {
+    list-style: none;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.tutorial-list li {
+    background-color: #5961d3;
+    color: white;
+    cursor: pointer;
+    padding: 16px 24px;
+    width: 85%;
+    text-align: center;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    border-radius: 40px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.3s;
+}
+
+.tutorial-list li:hover {
+    background-color: #343cb4;
+}
+
+.tutorial-list li a {
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    flex-grow: 1;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.tutorial-list li a:hover {
+    color: #d0e4ff;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+}
+
+body.night-mode .tutorial-list li {
+    background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
+    box-shadow: 0 8px 20px rgba(106, 17, 203, 0.5);
+}
+
+body.night-mode .tutorial-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(106, 17, 203, 0.7);
+}
+
+body.night-mode .tutorial-list li a {
+    color: #a0c4ff;
+}
+
+body.night-mode .tutorial-list li a:hover {
+    color: #d0e4ff;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+}
+
