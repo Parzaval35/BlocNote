@@ -1,3 +1,29 @@
+<?php
+session_start();
+$pdo = new PDO('mysql:host=localhost;dbname=blocnote', 'root', '');
+$isConnected = isset($_SESSION["utilisateur_id"]);
+
+// Traitement du formulaire
+if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["commentaire"])) {
+    $contenu = $_POST["commentaire"];
+    $id_parent = !empty($_POST["id_parent"]) ? intval($_POST["id_parent"]) : null;
+    $id_page=$_POST["id_page"];
+    $stmt = $pdo->prepare("INSERT INTO commentaires (id_utilisateur, contenu, id_parent,id_page) VALUES (?, ?, ?,?)");
+    $stmt->execute([$_SESSION["utilisateur_id"], $contenu, $id_parent,$id_page]);
+
+    header("Location: " . $_SERVER['PHP_SELF'] . "?id_page=$id_page");
+    exit();
+}
+
+// Récupération des commentaires
+$sql = "SELECT commentaires.*, utilisateurs.pseudo FROM commentaires 
+        JOIN utilisateurs ON commentaires.id_utilisateur = utilisateurs.id WHERE commentaires.id_page =3
+        ORDER BY commentaires.id_commentaire ASC";
+$stmt = $pdo->query($sql);
+$commentaires = $stmt->fetchAll();
+?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
