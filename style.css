@@ -22,7 +22,11 @@ body {
     flex-direction: column;
     min-height: 100vh;
     background-image: url('fond jour.webp');
-    background-size: cover;
+    background-size: cover;          
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;      /* c'est pour garder l’image fixe au scroll */
+    background-color: #000;            /* au cas où l’image ne prend pas tout */
     
 }
 
