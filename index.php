@@ -16,7 +16,7 @@
         </label>
     </div>
     <header>
-        <div class="logo"><img src="logo.png" alt="Block-Note Logo" style="height: 80px;"/></div>
+        <div class="logo"><img id="logo" src="logo.png" alt="Block-Note Logo" style="height: 80px;"/></div>
         <nav>
             <a href="#populaires">Populaires</a>
             <a href="#dernieres-maj">Dernières MàJ</a>
