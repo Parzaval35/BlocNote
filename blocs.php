@@ -44,7 +44,7 @@ $commentaires = $stmt->fetchAll();
      <div class="logo"><img src="images/logo.png" alt="Block-Note Logo" style="height: 80px;" id="logo" /></div>
      <nav>
             <a href="#populaires">Populaires</a>
-            <a href="#dernieres-maj">Dernières MàJ</a>
+            <a href="Maj.php">Dernières MàJ</a>
             <a href="blocs.php">Block</a>
             <a href="creatures.php">Mob</a>
             <a href="#tutoriels">Tutoriels</a>
