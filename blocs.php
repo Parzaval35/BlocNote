@@ -2,12 +2,12 @@
 session_start();
 $pdo = new PDO('mysql:host=localhost;dbname=blocnote', 'root', '');
 $isConnected = isset($_SESSION["utilisateur_id"]);
+$id_page = isset($_GET["id_page"]) ? intval($_GET["id_page"]) : 2;
 
 // Traitement du formulaire
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["commentaire"])) {
     $contenu = $_POST["commentaire"];
     $id_parent = !empty($_POST["id_parent"]) ? intval($_POST["id_parent"]) : null;
-    $id_page=$_POST["id_page"];
     $stmt = $pdo->prepare("INSERT INTO commentaires (id_utilisateur, contenu, id_parent,id_page) VALUES (?, ?, ?,?)");
     $stmt->execute([$_SESSION["utilisateur_id"], $contenu, $id_parent,$id_page]);
 
