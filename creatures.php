@@ -43,13 +43,11 @@ $commentaires = $stmt->fetchAll();
   <header>
      <div class="logo"><img src="images/logo.png" alt="Block-Note Logo" style="height: 80px;" id="logo" /></div>
      <nav>
-            <a href="#populaires">Populaires</a>
-            <a href="#dernieres-maj">Dernières MàJ</a>
+            <a href="index.php">Home</a>
+            <a href="Maj.php">Dernières MàJ</a>
             <a href="#block">Block</a>
-            <a href="#mob">Mob</a>
+            <a href="Creatures.html">Mob</a>
             <a href="#tutoriels">Tutoriels</a>
-            <a href="#mods-populaires">Mods Populaires</a>
-            <a href="#modpacks">Modpacks</a>
      </nav>
      <style>
 
