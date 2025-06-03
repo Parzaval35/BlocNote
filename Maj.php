@@ -62,6 +62,7 @@
         echo "</div>";
     }
     ?>
+    <a href="#" class="top-link">Retour en haut</a>
     </main>
 </body>
 <script src="script.js"></script>
