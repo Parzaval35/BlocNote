@@ -2,7 +2,7 @@
 $host = 'localhost';
 $bddname = 'blocnote';
 $username = 'root';
-$password = 'S3Gsm2P!mysql';
+$password = '';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$bddname;charset=utf8", $username, $password);
