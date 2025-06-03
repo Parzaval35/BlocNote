@@ -20,14 +20,14 @@ body {
     line-height: 1.6;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    background-image: url('fond jour.webp');
+    min-height: 100vh;  
+    background-image: url('images/fond jour.webp');
     background-size: cover;          
     background-repeat: no-repeat;
-    background-position: center top;
-    background-attachment: fixed;      /* c'est pour garder l’image fixe au scroll */
+    background-position: center top;   /* ou "center center" */
+    background-attachment: fixed;      /* ⬅️ garde l’image fixe au scroll */
     background-color: #000;            /* au cas où l’image ne prend pas tout */
-    
+
 }
 
 header {
@@ -45,7 +45,7 @@ header {
 .logo {
     font-weight: bold;
     font-size: 1.5em;
-    margin-bottom: 10px;
+    margin: 0 auto;
 }
 nav {
     display: flex;
@@ -188,8 +188,9 @@ input:checked+span::before {
 }
 
 .night-mode {
-    background-image: url('fond nuit.webp');
+    background-image: url('images/fond nuit.webp');
     background-size: cover;
+    logo: url('images/dark_logo');
 }
 
 body.night-mode header {
