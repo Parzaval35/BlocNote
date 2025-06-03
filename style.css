@@ -1,48 +1,67 @@
 .box {
-    background: #ccc;
-    width: 300px;
-    margin: 100px; 
-    padding: 20px;
-    border-radius: 5px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  text-align: center;
 }
 
-.box h2 {
-  margin-bottom: 20px;
-  font-size: 24px;
+h2 {
+  margin-bottom: 25px;
+}
+
+.form-group {
+  align-items: center;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.form-group label {
+  width: 130px;
+  margin-right: 10px;
+  font-weight: bold;
   color: #333;
 }
 
-.box input[type="text"],
-.box input[type="password"] {
-  width: 10%;
-  padding: 12px;
-  margin: 10px 0;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  font-size: 16px;
-  transition: 0.3s;
+.form-group input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
 }
 
-.box input[type="text"]:focus,
-.box input[type="password"]:focus {
-  border-color: #4CAF50;
-  outline: none;
-}
-
-.box input[type="submit"] {
+input[type="submit"] {
   background-color: #2196F3;
   color: white;
   border: none;
   padding: 12px 20px;
-  margin-top: 15px;
   border-radius: 10px;
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.box input[type="submit"]:hover {
+input[type="submit"]:hover {
   background-color: #0b7dda;
+}
+
+.form-actions {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.error-message {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding: 12px;
+  background-color: #f8d7da;
+  color: #721c24;
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid #f5c6cb;
+  clear: both;
 }
 
 .box2 {
