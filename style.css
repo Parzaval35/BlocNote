@@ -207,7 +207,7 @@ input {
     cursor: pointer;
 }
 
-span::before {
+.switch span::before {
     content: "";
     position: absolute;
     width: 16px;
@@ -259,4 +259,36 @@ body.night-mode footer a {
     color: #ffffff;
     text-decoration: none;
     margin: 0 10px;
+}
+
+/* Bouton de l'accordéon */
+.accordion-btn {
+  background-color: #5961d3;
+  color: white;
+  cursor: pointer;
+  padding: 16px 24px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  border-radius: 12px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: background-color 0.3s;
+}
+
+.accordion-btn:hover {
+  background-color: #343cb4;
+}
+
+.category-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+
+.category-panel.open {
+  max-height: 2000px;
 }
