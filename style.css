@@ -320,15 +320,26 @@ section#dernieres-maj {
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
+body.night-mode section#dernieres-maj {
+    background-color: #333333;
+    box-shadow: 0 0 10px rgba(255,255,255,0.2);
+}
 
 section#dernieres-maj h2 {
     color: #d2691e;
+}
+body.night-mode section#dernieres-maj h2 {
+    color: #4ecdc4;
 }
 
 section#dernieres-maj article {
     margin-top: 20px;
     border-left: 4px solid #d2691e;
     padding-left: 15px;
+}
+body.night-mode section#dernieres-maj article {
+    border-left: 4px solid #4ecdc4;
+    color: #f0f0f0;
 }
 
 .maj {
