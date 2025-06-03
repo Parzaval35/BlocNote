@@ -26,6 +26,12 @@
         </nav>
     </header>
     <main>
+        <?php
+	        session_start();
+	        if (isset($_SESSION["pseudo"])) {
+		        echo"<h2>Bienvenue, " . $_SESSION["pseudo"]. "</h2>";}
+	    ?>
+
         <section id="presentation">
             <h2>Présentation du jeu</h2>
             <p>Minecraft est un jeu vidéo bac à sable développé par Mojang Studios, qui permet aux joueurs d'explorer, construire et survivre dans un monde généré de manière procédurale composé de blocs. Que vous soyez un aventurier en quête de ressources, un architecte passionné ou un explorateur curieux, Minecraft vous offre une liberté totale pour créer votre propre expérience de jeu.</p>
