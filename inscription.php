@@ -22,29 +22,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!DOCTYPE HTML>
 <head>
 <meta charset="UTF-8">
-	<title>Connexion</title>
+	<title>Inscription</title>
 	<link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body style="justify-content: center; align-items: center;">
+  <div class="box">
+    <h2>Inscription</h2>
+    <form method="POST" action="Inscription.php" autocomplete="on">
+      <div class="form-group">
+        <label for="pseudo">Pseudo :</label>
+        <input type="text" id="pseudo" name="pseudo" autocomplete="username" required>
+      </div>
+      <div class="form-group">
+        <label for="mot_de_passe">Mot de passe :</label>
+        <input type="password" id="mot_de_passe" name="mot_de_passe" autocomplete="new-password" required>
+      </div>
+      <div class="form-group">
+        <label for="mail">E-mail :</label>
+        <input type="email" id="email" name="mail" autocomplete="email" required>
+      </div>
 
-    <form method="POST">
-	<div class= box>
-        Pseudo : <input type="text" name="pseudo" placeholder="Pseudo"  required><br>
-	<br>
-        Mot de passe : <input type="password" name="mot_de_passe" placeholder="Mot de passe"  required><br>
-	<br>
-        E-mail : <input type="email" name="email" placeholder="Email"  required><br>
-	<br>
+      <?php if (!empty($Message)) : ?>
+        <div class="error-message"><?= $Message ?></div>
+      <?php endif; ?>
+
+      <div class="form-actions">
         <input type="submit" value="S'inscrire">
-	</div>
-	<?php if (!empty($Message)) : ?>
-    		<div class="box2">
-        	<?= $Message ?>
-    		</div>
-    	<?php endif; ?>
-	exit();
+      </div>
     </form>
-
+  </div>
 </body>
 </html>
 </div>
