@@ -1,23 +1,23 @@
 <?php
 session_start();
 require 'config.php';
-$MessageErreur = "";
+$Message = "";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $pseudo = $_POST['pseudo'];
     $mot_de_passe = $_POST['mot_de_passe'];
-    $stmt = $pdo->prepare("SELECT * FROM utilisateurs WHERE pseudo = ?");
-    $stmt->execute([$pseudo]);
-    $user = $stmt->fetch();
 
-    if ($user && password_verify($mot_de_passe, $user['mot_de_passe'])) {
+    try {
+        $stmt = $pdo->prepare("SELECT * FROM utilisateurs WHERE pseudo = ?");
+        $stmt->execute([$pseudo]);
+        $user = $stmt->fetch();
         $_SESSION['utilisateur_id'] = $user['id'];
         $_SESSION['pseudo'] = $user['pseudo'];
-        $_SESSION['role'] = $user['role'];
+        $_SESSION['role'] = $user['role'] ?? 'utilisateur';
+        $Message = "<p style='color:green;'>Connexion réussie !</p>";
         echo '<meta http-equiv="refresh" content="3;url=index.php">';
-        exit;
-    } else {
-        $MessageErreur = "<p style='color:red;'>Identifiants incorrects</p>";
+    } catch (PDOException $e) {
+        $Message = "<p style='color:red;'>Erreur lors de la connexion : " . htmlspecialchars($e->getMessage()) . "</p>";
     }
 }
 ?>
@@ -39,8 +39,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <label for="mot_de_passe">Mot de passe :</label>
         <input type="password" id="mot_de_passe" name="mot_de_passe" required>
       </div>
-      <?php if (!empty($MessageErreur)) : ?>
-        <div class="error-message"><?= $MessageErreur ?></div>
+      <?php if (!empty($Message)) : ?>
+        <div class="error-message"><?= $Message ?></div>
       <?php endif; ?>
 
       <div class="form-actions">
