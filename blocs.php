@@ -59,9 +59,10 @@ $commentaires = $stmt->fetchAll();
        padding: 16px;
        margin: 20px;
        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        text-align: justify;
-        transition: background 0.3s;
-       flex: 1;
+       text-align: justify;
+       transition: background 0.3s;
+       display: flex;
+  	flex-wrap: wrap;
     }
 
     
