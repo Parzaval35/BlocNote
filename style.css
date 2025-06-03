@@ -311,3 +311,39 @@ body.night-mode footer a {
 .category-panel.open {
   max-height: 2000px;
 }
+
+section#dernieres-maj {
+    background-color: #fff;
+    padding: 20px;
+    margin: 40px auto;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+section#dernieres-maj h2 {
+    color: #d2691e;
+}
+
+section#dernieres-maj article {
+    margin-top: 20px;
+    border-left: 4px solid #d2691e;
+    padding-left: 15px;
+}
+
+.maj {
+    background: #fff;
+    border-left: 6px solid #5961d3;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+body.night-mode .maj {
+    background-color: #333333;
+    border-left: 6px solid #4ecdc4;
+    color: #f0f0f0;
+    box-shadow: 0 0 10px rgba(78, 205, 196, 0.7);
+}
