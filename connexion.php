@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 require 'config.php';
@@ -7,7 +6,6 @@ $MessageErreur = "";
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $pseudo = $_POST['pseudo'];
     $mot_de_passe = $_POST['mot_de_passe'];
-    $pdo->exec("USE blocnote");
     $stmt = $pdo->prepare("SELECT * FROM utilisateurs WHERE pseudo = ?");
     $stmt->execute([$pseudo]);
     $user = $stmt->fetch();
@@ -16,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['utilisateur_id'] = $user['id'];
         $_SESSION['pseudo'] = $user['pseudo'];
         $_SESSION['role'] = $user['role'];
-        header("Location: index.php");
+        echo '<meta http-equiv="refresh" content="3;url=index.php">';
         exit;
     } else {
         $MessageErreur = "<p style='color:red;'>Identifiants incorrects</p>";
@@ -29,21 +27,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	<title>Connexion</title>
 	<link rel="stylesheet" href="style.css">
 </head>
-<body>
-<form method="POST">
-	<div class= box>
-        Pseudo : <input type="text" name="pseudo" required><br>
-	<br>
-        Mot de passe : <input type="password" name="mot_de_passe" required><br>
-	<br>
-        <input type="submit" value="Se connecter">
-	</div>
-	<?php if (!empty($MessageErreur)) : ?>
-    		<div class="box2">
-        	<?= $MessageErreur ?>
-    		</div>
-    	<?php endif; ?>
-    </form>
+<body style="justify-content: center; align-items: center;">
+  <div class="box">
+    <h2>Connexion</h2>
+    <form method="POST" action="connexion.php">
+      <div class="form-group">
+        <label for="pseudo">Pseudo :</label>
+        <input type="text" id="pseudo" name="pseudo" required>
+      </div>
+      <div class="form-group">
+        <label for="mot_de_passe">Mot de passe :</label>
+        <input type="password" id="mot_de_passe" name="mot_de_passe" required>
+      </div>
+      <?php if (!empty($MessageErreur)) : ?>
+        <div class="error-message"><?= $MessageErreur ?></div>
+      <?php endif; ?>
 
+      <div class="form-actions">
+        <input type="submit" value="Se connecter">
+      </div>
+    </form>
+  </div>
 </body>
 </html>
