@@ -88,6 +88,65 @@ $commentaires = $stmt->fetchAll();
         echo "</div>";
     }
     ?>
+
+<section class="comment-section" id="commentaires">
+  <h2>Commentaires</h2>
+<ul>
+<?php foreach ($commentaires as $commentaire): ?>
+    <?php if ($commentaire["id_parent"] === null): ?>
+        <li>
+            <strong>Commentaire de <?= $commentaire["pseudo"] ?> : </strong><br><?= $commentaire["contenu"] ?>
+            <br>
+            <!-- Affichage des réponses -->
+            <?php foreach ($commentaires as $reponse): ?>
+                <?php if ($reponse["id_parent"] == $commentaire["id_commentaire"]): ?>
+                    <div style="margin-left:30px;">
+                        Réponse de <?= $reponse["pseudo"] ?> : <br><?= $reponse["contenu"] ?>
+			<br>
+                    </div>
+                <?php endif; ?>
+            <?php endforeach; ?>
+
+            <!-- Lien Répondre -->
+            <a href="?repondre=<?= $commentaire['id_commentaire'] ?>&id_page=<?= $id_page ?>#commentaires">Répondre</a>
+
+            <!-- Formulaire réponse -->
+            <?php if (isset($_GET["repondre"]) && $_GET["repondre"] == $commentaire['id_commentaire']): ?>
+                <?php if ($isConnected): ?>
+                    <form method="post">
+                        <input type="hidden" name="id_parent" value="<?= $commentaire['id_commentaire'] ?>">
+                        <textarea name="commentaire" required></textarea><br>
+                        <button type="submit">Publier la réponse</button>
+                    </form>
+                <?php else: ?>
+                    <p style="color:red;">Vous ne pouvez pas répondre au commentaire, connectez-vous ou inscrivez-vous.</p>
+                <?php endif; ?>
+            <?php endif; ?>
+
+        </li>
+        <br>
+    <?php endif; ?>
+<?php endforeach; ?>
+</ul>
+
+
+<!-- Ajouter un commentaire principal -->
+<a href="?ajouter=1&id_page=<?= $id_page ?>#commentaires">Ajouter un commentaire</a>
+
+<?php if (isset($_GET["ajouter"])): ?>
+    <?php if ($isConnected): ?>
+        <form method="post">
+            <input type="hidden" name="id_parent" value="">
+	    <input type="hidden" name="id_page" value="3">
+            <textarea name="commentaire" required></textarea><br>
+            <button type="submit">Publier le commentaire</button>
+        </form>
+    <?php else: ?>
+        <p style="color:red;">Vous ne pouvez pas ajouter de commentaire, connectez-vous ou inscrivez-vous.</p>
+    <?php endif; ?>
+<?php endif; ?>
+
+</section>
     <a href="#" class="top-link">Retour en haut</a>
     </main>
 </body>
