@@ -33,8 +33,8 @@ $commentaires = $stmt->fetchAll();
 </head>
 <body>
   <div class="fixed-menu">
-    <button class="connexion-btn" href="connexion.php">Connexion</button>
-    <button class="inscription-btn" href="inscription.php">Inscription</button>
+    <button class="connexion-btn" onclick="window.location.href='connexion.php'">Connexion</button>
+    <button class="inscription-btn" onclick="window.location.href='inscription.php'">Inscription</button>
     <label class="switch">
         <input type="checkbox" id="nightModeCheckbox">
         <span></span>
@@ -45,8 +45,8 @@ $commentaires = $stmt->fetchAll();
      <nav>
             <a href="#populaires">Populaires</a>
             <a href="#dernieres-maj">Dernières MàJ</a>
-            <a href="#block">Block</a>
-            <a href="#mob">Mob</a>
+            <a href="blocs.php">Block</a>
+            <a href="creatures.php">Mob</a>
             <a href="#tutoriels">Tutoriels</a>
             <a href="#mods-populaires">Mods Populaires</a>
             <a href="#modpacks">Modpacks</a>
