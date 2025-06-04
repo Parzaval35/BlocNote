@@ -47,7 +47,7 @@ $commentaires = $stmt->fetchAll();
             <a href="Maj.php">Dernières MàJ</a>
             <a href="#block">Block</a>
             <a href="Creatures.html">Mob</a>
-            <a href="#tutoriels">Tutoriels</a>
+            <a href="menu_tuto.php">Tutoriels</a>
      </nav>
      <style>
 
