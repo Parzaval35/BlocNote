@@ -213,6 +213,7 @@ $commentaires = $stmt->fetchAll();
 </div>
 <section class="comment-section" id="commentaires">
   <h2>Commentaires</h2>
+<div class="comment-scroll">
 <ul>
 <?php foreach ($commentaires as $commentaire): ?>
     <?php if ($commentaire["id_parent"] === null): ?>
@@ -250,7 +251,7 @@ $commentaires = $stmt->fetchAll();
     <?php endif; ?>
 <?php endforeach; ?>
 </ul>
-
+</div>
 
 <!-- Ajouter un commentaire principal -->
 <a href="?ajouter=1&id_page=<?= $id_page ?>#commentaires" class="comment-btn">Ajouter un commentaire</a>
