@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["commentaire"])) {
 
 // Récupération des commentaires
 $sql = "SELECT commentaires.*, utilisateurs.pseudo FROM commentaires 
-        JOIN utilisateurs ON commentaires.id_utilisateur = utilisateurs.id WHERE commentaires.id_page =1
+        JOIN utilisateurs ON commentaires.id_utilisateur = utilisateurs.id WHERE commentaires.id_page =4
         ORDER BY commentaires.id_commentaire ASC";
 $stmt = $pdo->query($sql);
 $commentaires = $stmt->fetchAll();
