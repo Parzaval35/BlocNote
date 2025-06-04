@@ -29,13 +29,12 @@
             <a href="index.php">Home</a>
             <a href="Maj.php">Dernières MàJ</a>
             <a href="blocs.php">Block</a>
-            <a href="Creatures.html">Mob</a>
+            <a href="creatures.php">Mob</a>
             <a href="menu_tuto.php">Tutoriels</a>
         </nav>
     </header>
     <main>
         <?php
-	        session_start();
 	        if (isset($_SESSION["pseudo"])) {
 		        echo"<h2>Bienvenue, " . $_SESSION["pseudo"]. "</h2>";}
 	    ?>
