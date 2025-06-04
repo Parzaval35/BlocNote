@@ -16,5 +16,6 @@ session_destroy();
   <div class="box">
       <p>Déconnexion réussie ! Vous allez être redirigé vers la page d'accueil.</p>
   </div>
+  <script src="script.js"></script>
 </body>
 </html>
