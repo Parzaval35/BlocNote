@@ -34,8 +34,7 @@ $commentaires = $stmt->fetchAll();
 </head>
 <body>
     <div class="fixed-menu">
-        <?php
-	session_start(); 
+        <?php 
 
 	if (isset($_SESSION["pseudo"])) {
     		echo '<button class="connexion-btn" onclick="window.location.href=\'deconnexion.php\'">Déconnexion</button>';
