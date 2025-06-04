@@ -109,7 +109,7 @@ $commentaires = $stmt->fetchAll();
             <?php foreach ($commentaires as $reponse): ?>
                 <?php if ($reponse["id_parent"] == $commentaire["id_commentaire"]): ?>
                     <div style="margin-left:30px;">
-                        Réponse de <?= $reponse["pseudo"] ?> : <br><?= $reponse["contenu"] ?>
+                        <strong>Réponse de <?= $reponse["pseudo"] ?> : </strong><br><?= $reponse["contenu"] ?>
 			<br>
                     </div>
                 <?php endif; ?>
