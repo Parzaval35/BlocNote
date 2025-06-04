@@ -320,7 +320,7 @@ $commentaires = $stmt->fetchAll();
             <?php endforeach; ?>
 
             <!-- Lien Répondre -->
-            <a href="?repondre=<?= $commentaire['id_commentaire'] ?>&id_page=<?= $id_page ?>#commentaires">Répondre</a>
+            <a href="?repondre=<?= $commentaire['id_commentaire'] ?>&id_page=<?= $id_page ?>#commentaires" class="reponse-btn">Répondre</a>
 
 
             <!-- Formulaire réponse -->
@@ -344,7 +344,7 @@ $commentaires = $stmt->fetchAll();
 
 
 <!-- Ajouter un commentaire principal -->
-<a href="?ajouter=1&id_page=<?= $id_page ?>#commentaires">Ajouter un commentaire</a>
+<a href="?ajouter=1&id_page=<?= $id_page ?>#commentaires" class="comment-btn">Ajouter un commentaire</a>
 
 <?php if (isset($_GET["ajouter"])): ?>
     <?php if ($isConnected): ?>
