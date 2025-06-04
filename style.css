@@ -64,6 +64,27 @@ input[type="submit"]:hover {
   clear: both;
 }
 
+.success-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f8f9fa;
+  font-family: Arial, sans-serif;
+}
+
+.success-message {
+  padding: 20px 30px;
+  background-color: #d4edda; 
+  color: #155724; 
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid #c3e6cb;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 .box2 {
 	background: #ccc;
     	width: 300px;
