@@ -10,13 +10,11 @@ session_destroy();
   <title>Déconnexion</title>
   <link rel="stylesheet" href="style.css">
   <meta http-equiv="refresh" content="3;url=index.php">
-
 </head>
+<body style="justify-content: center; align-items: center;">
 <body>
-<div class="success-box">
-  <div class="success-message">
-    <p>Déconnexion réussie ! Vous allez être redirigé vers la page d'accueil.</p>
-</div>
-</div>
+  <div class="box">
+      <p>Déconnexion réussie ! Vous allez être redirigé vers la page d'accueil.</p>
+  </div>
 </body>
 </html>
