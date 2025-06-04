@@ -456,11 +456,15 @@ body.night-mode .comment-section {
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     color: #333;
-    max-height: 400px;
     overflow-y: auto;
 
 }
 
+.comment-scroll {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
 .comment-section textarea {
     width: 95%;
     max-width: 700px;
