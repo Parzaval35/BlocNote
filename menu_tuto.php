@@ -62,7 +62,7 @@ $commentaires = $stmt->fetchAll();
         <ul class="tutorial-list">
             <li><a href="Tuto-finir.php">Tuto finir Minecraft</a></li>
             <li><a href="maintenance.php">Tuto Construction</a></li>
-            <li><a href="maintenance.php">Tuto Redstone</a></li>
+            <li><a href="Tuto-redstone.php">Tuto Redstone</a></li>
             <li><a href="maintenance.php">Tuto Survie</a></li>
             <li><a href="maintenance.php">Tuto Exploration</a></li>
         </ul>
