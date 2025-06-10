@@ -296,6 +296,23 @@ $commentaires = $stmt->fetchAll();
           <li><strong>Points de vie :</strong>
             <span class="pv"><img src="images/coeur.png" alt="cœur"> x150</span>
           </li>
+	</ul>
+      </article>
+	 <article class="mob">
+        <h3>Warden</h3>
+        <p> Ce boss se trouve dans des villes abandonnés dans les entrailles de la Terre, les anciennes cités. </p>
+        <img src="images/warden.jpg" alt="Warden" class="mob-img">
+        <ul>
+          <li><strong>Comportement :</strong> Cette créature est aveugle, et se repère donc au bruit. Il n'hésitera pas à te charger ou t'envoyer des sonics boom.</li>
+          <li><strong>Appariition :</strong> Si tu oses t'aventurer et que tu fais trop de bruit, au 3 ème avertissement, il sortira du sol pour te punir.</li>
+          <li><strong>Conseils :</strong> Utilise de la laine pour te déplacer, elles absorbent le bruit. Munie toi de boules de neige pour détourner son attention.</li>
+          <li><strong>Butin :</strong>
+            <img src="images/Sculk_catalyst.webp" alt="Sculk_catalyst" class="item-icon"> Catalyseur de sculk,
+            <img src="images/xp.png" alt="XP" class="item-icon"> un peu d’XP
+          </li>
+          <li><strong>Points de vie :</strong>
+            <span class="pv"><img src="images/coeur.png" alt="cœur"> x250</span>
+          </li>
         </ul>
       </article>
       </section>
