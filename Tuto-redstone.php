@@ -45,7 +45,6 @@
     }
 
     </style>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
   </header>
 <body>
 
@@ -85,10 +84,6 @@
     <p>Rajoute un levier pour activer la redstonne du milieu, et admire le résusltat. Voilà maintenant tu as une porte totalement indétectable pour tes bases secrètes.</p>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
 
 </body>
 
@@ -98,7 +93,6 @@
       <a href="#politique-confidentialite">Politique de confidentialité</a> |
       <a href="#mentions-legales">Mentions légales</a>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="script.js"></script>
   <script>
     AOS.init();
