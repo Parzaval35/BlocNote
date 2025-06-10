@@ -180,9 +180,9 @@ $commentaires = $stmt->fetchAll();
 
     <article class="mob">
       <h3>Table de Craft</h3>
-      <img src="images/crafting_table.png" alt="crafting_table" class="mob-img">
+      <img src="images/crafting_table.webp" alt="crafting_table" class="mob-img">
       <ul>
-        <li><strong>Obtention :</strong> Craft avec 4 planches.</li>
+        <li><strong>Obtention :</strong> Se craft avec 4 planches.</li>
         <li><strong>Utilisation :</strong> Permet de crafter des items et des blocs.</li>
         <li><strong>Interface :</strong> Possède une UI pour gérer une grille de crafting en 3x3.</li>
       </ul>
