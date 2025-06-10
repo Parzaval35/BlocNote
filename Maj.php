@@ -1,6 +1,6 @@
 <?php
 session_start();
-$pdo = new PDO('mysql:host=localhost;dbname=blocnote', 'root', '');
+require 'config.php';
 $isConnected = isset($_SESSION["utilisateur_id"]);
 $id_page = isset($_GET["id_page"]) ? intval($_GET["id_page"]) : 3;
 
