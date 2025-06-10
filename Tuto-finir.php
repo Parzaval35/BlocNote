@@ -45,7 +45,6 @@
     }
 
     </style>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
   </header>
 <body>
 
@@ -77,11 +76,6 @@
     <p>Transforme les Blaze rods en <strong>poudre de Blaze</strong> <img src="images/blaze_powder.png" class="item-icon"> et fusionne-les avec des <strong>perles</strong> pour obtenir des <strong>yeux de l’Ender</strong> <img src="images/ender_eye.png" class="item-icon">. Utilise-les pour trouver un <strong>Stronghold</strong> et activer le <strong>portail de l’End</strong>. Dans l’End, détruis les <strong>cristaux</strong> <img src="images/ender_crystal.webp" class="item-icon"> sur les piliers, puis bats le <strong>Dragon de l’End</strong> <img src="images/DragonHead.webp" class="item-icon">. Une fois vaincu, tu pourras accéder à une ville de l’End pour trouver des <strong>Élytras</strong> <img src="images/elytra.png" class="item-icon"> (ailes planantes). Félicitations, t’as fini Minecraft ! 🎉</p>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-
 </body>
 
   </main>
@@ -90,7 +84,6 @@
       <a href="#politique-confidentialite">Politique de confidentialité</a> |
       <a href="#mentions-legales">Mentions légales</a>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="script.js"></script>
   <script>
     AOS.init();
