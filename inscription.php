@@ -15,9 +15,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	$stmt = $pdo->prepare("SELECT * FROM utilisateurs WHERE pseudo = ?");
         $stmt->execute([$pseudo]);
         $user = $stmt->fetch();
-        $_SESSION['utilisateur_id'] = $user['id'];
-        $_SESSION['pseudo'] = $user['pseudo'];
-        $_SESSION['role'] = $user['role'] ?? 'utilisateur';
         $Message = "<p style='color:green;'>Inscription réussie!</p>";
 	      echo '<meta http-equiv="refresh" content="3;url=index.php">';
     } catch (PDOException $e) {
