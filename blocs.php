@@ -75,22 +75,10 @@ $commentaires = $stmt->fetchAll();
       display: block;
       margin: 0 auto 12px auto;
       border-radius: 8px;
-      max-width: 300px;
+      max-width: 150px;
       height: auto;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* ombre image */
-    }   
-
-    
-  .item-icon {
-      width: 24px;
-      height: 24px;
-      vertical-align: middle;
-      margin-right: 4px;
-    }
-    .cœur {
-      width: 24px;
-      height: 24px;
-    }
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    } 
     </style>
   </header>
 
@@ -189,6 +177,16 @@ $commentaires = $stmt->fetchAll();
 <div class="category-panel">
   <div class="category">
     <p>Ces blocs servent à des actions spécifiques : cuisson, stockage, craft, etc.</p>
+
+    <article class="mob">
+      <h3>Table de Craft</h3>
+      <img src="images/crafting_table.png" alt="crafting_table" class="mob-img">
+      <ul>
+        <li><strong>Obtention :</strong> Craft avec 4 planches.</li>
+        <li><strong>Utilisation :</strong> Permet de crafter des items et des blocs.</li>
+        <li><strong>Interface :</strong> Possède une UI pour gérer une grille de crafting en 3x3.</li>
+      </ul>
+    </article>
 
     <article class="mob">
       <h3>Four</h3>
