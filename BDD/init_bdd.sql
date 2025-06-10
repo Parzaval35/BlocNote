@@ -8,8 +8,7 @@ CREATE TABLE IF NOT EXISTS utilisateurs (
     email VARCHAR(150) NOT NULL UNIQUE,
     mot_de_passe VARCHAR(255) NOT NULL,
     
-    role ENUM('utilisateur', 'admin') DEFAULT 'utilisateur',
-);
+    role ENUM('utilisateur', 'admin') DEFAULT 'utilisateur');
 
 CREATE TABLE `commentaires` (
   `id_commentaire` int(11) NOT NULL,
@@ -28,6 +27,5 @@ ALTER TABLE `commentaires`
 
 ALTER TABLE `commentaires`
   ADD CONSTRAINT `commentaires_ibfk_1` FOREIGN KEY (`id_utilisateur`) REFERENCES `utilisateurs` (`id`);
-COMMIT;
 
 
