@@ -394,7 +394,7 @@ body.night-mode footer a {
 
 
 .category-panel.open {
-  max-height: 2000px;
+  max-height: 200000px;
 }
 
 section#dernieres-maj {
@@ -535,5 +535,36 @@ body.night-mode .tutorial-list li a {
 body.night-mode .tutorial-list li a:hover {
     color: #d0e4ff;
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+}
+
+.tuto-section {
+      background-color: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      margin-bottom: 40px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+
+}
+
+body.night-mode .tuto-section {
+    background-color: #444444;
+    color: white;
+}
+
+.tuto-section h2 {
+      font-size: 1.8em;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+}
+
+.tuto-section p {
+      font-size: 1.1em;
+      line-height: 1.6em;
 }
 
