@@ -2,11 +2,10 @@
 
 
 session_start();
-
+require 'config.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
  $commentaire = $_POST["commentaire"];
  $id_parent = null;
- $pdo = new PDO('mysql:host=localhost;dbname=blocnote', 'root', '');
  $sql = "INSERT INTO commentaires (id_utilisateur, contenu,id_parent) VALUES (?, ?, ?)";
  $stmt = $pdo->prepare($sql);
  $stmt->execute([$_SESSION["user"]["id"], $commentaire, $id_parent]);
