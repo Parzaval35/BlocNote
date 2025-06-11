@@ -75,7 +75,7 @@
     </main>
     <footer>
         <a href="pc.php">Politique de confidentialité</a> |
-        <a href="pc.php">Mentions légales</a>
+        <a href="ml.php">Mentions légales</a>
     </footer>
     <script src="script.js"></script>
 </body>
