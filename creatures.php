@@ -56,41 +56,6 @@ $commentaires = $stmt->fetchAll();
             <a href="creatures.php">Mob</a>
             <a href="menu_tuto.php">Tutoriels</a>
      </nav>
-     <style>
-
-    .mob {
-       background-color: rgba(255, 255, 255, 0.274);
-        border-radius: 16px;
-       padding: 16px;
-       margin: 20px;
-       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        text-align: justify;
-        transition: background 0.3s;
-       flex: 1;
-    }
-
-    
-    .mob-img {
-      display: block;
-      margin: 0 auto 12px auto;
-      border-radius: 8px;
-      max-width: 300px;
-      height: auto;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* ombre image */
-    }   
-
-    
-  .item-icon {
-      width: 24px;
-      height: 24px;
-      vertical-align: middle;
-      margin-right: 4px;
-    }
-    .cœur {
-      width: 24px;
-      height: 24px;
-    }
-    </style>
   </header>
 
   <main>
