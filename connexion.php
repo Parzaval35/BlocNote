@@ -1,4 +1,4 @@
-<?php
+on<?php
 session_start();
 require 'config.php';
 $Message = "";
