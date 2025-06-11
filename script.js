@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const nightModeCheckbox = document.getElementById('nightModeCheckbox');
     const logo = document.getElementById('logo');
 
-    // charge le mode 
+    // Chargement du mode sombre
     const savedNightMode = localStorage.getItem('nightMode');
     if (savedNightMode === 'enabled') {
         document.body.classList.add('night-mode');
