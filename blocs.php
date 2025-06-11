@@ -3,6 +3,16 @@ session_start();
 require 'config.php';
 $isConnected = isset($_SESSION["utilisateur_id"]);
 $id_page = isset($_GET["id_page"]) ? intval($_GET["id_page"]) : 2;
+$isAdmin = isset($_SESSION["role"]) && $_SESSION["role"] === "admin";
+
+//Traitement de la suppression commentaire
+if ($isConnected && $isAdmin && isset($_GET['supprimer'])) {
+    $id_supp = intval($_GET['supprimer']);
+    $pdo->prepare("DELETE FROM commentaires WHERE id_parent = ?")->execute([$id_supp]);
+    $pdo->prepare("DELETE FROM commentaires WHERE id_commentaire = ?")->execute([$id_supp]);
+    header("Location: " . $_SERVER['PHP_SELF'] . "?id_page=$id_page#commentaires");
+    exit();
+}
 
 // Traitement du formulaire
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["commentaire"])) {
