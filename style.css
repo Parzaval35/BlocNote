@@ -274,6 +274,21 @@ footer a:hover {
   margin-top: 10px;
 }
 
+.suppr-btn {
+  display: inline-block;
+  text-decoration: none; 
+  background-color: #cc0000;
+  color: white;
+  border: none;
+  font-size:13px;
+    padding: 4px 7px;
+    border-radius: 4px;
+    font-weight: bold;
+   cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
 .reponse-btn:hover {
     background-color: #004a99;
 }
@@ -568,4 +583,3 @@ body.night-mode .tuto-section {
       font-size: 1.1em;
       line-height: 1.6em;
 }
-
