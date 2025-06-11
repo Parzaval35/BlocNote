@@ -157,6 +157,10 @@ $commentaires = $stmt->fetchAll();
 </section>
     <a href="" class="top-link">Retour en haut</a>
     </main>
+	<footer>
+      		<a href="pc.php">Politique de confidentialité</a> |
+      		<a href="ml.php">Mentions légales</a>
+</footer>
 </body>
 <script src="script.js"></script>
 </html>
