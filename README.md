@@ -18,4 +18,4 @@ En bas de chaque page, on retrouve également un lien vers les pages de politiqu
 1. Télécharger le code source en .zip
 2. Mettre le projet dans le dossier C:\xampp\htdocs\
 3. Décompresser le fichier et renommer le dossier "Blocnote"
-4. Allez dans ‪C:\xampp\htdocs\Blocnote\config.php et insérez votre mot de passe dans $password = ''
+4. Allez dans ‪C:\xampp\htdocs\Blocnote\config.php et insérez votre mot de passe dans $password = '  '
