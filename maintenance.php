@@ -28,7 +28,7 @@
     <main>
         <div class="maintenance"><img id="logo" src="images/cree_boom.gif" alt="boom" style="height: 2rm;"/></div>
         <h1>En reconstruction...</h1>
-        <h6>(Un creeper de merde a explosé)</h6>
+        <h6>(Un creeper a explosé sur cette page)</h6>
         <a href="#" class="top-link">Retour en haut</a>
     </main>
     <footer>
