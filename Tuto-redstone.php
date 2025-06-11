@@ -26,29 +26,10 @@
             <a href="menu_tuto.php">Tutoriels</a>
      </nav>
      <style>
-
     html {
       scroll-snap-type : y mandatory;
       scroll-behavior: smooth;
     }
-    
-    .img {
-      display: block;
-      margin: 0 auto 12px auto;
-      border-radius: 8px;
-      min-width: 500px;
-      max-width: 500px;
-      height: auto;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* ombre image */
-    }   
-
-  .item-icon {
-      width: 24px;
-      height: 24px;
-      vertical-align: middle;
-      margin-right: 4px;
-    }
-
     </style>
   </header>
 <body>
