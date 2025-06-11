@@ -253,6 +253,7 @@ $commentaires = $stmt->fetchAll();
 
 <!-- Ajouter un commentaire principal -->
 <a href="?ajouter=1&id_page=<?= $id_page ?>#commentaires" class="comment-btn">Ajouter un commentaire</a>
+<a href="?ajouter=1&id_page=<?= $id_page ?>#commentaires" class="suppr-btn">Supprimer un commentaire</a>
 
 <?php if (isset($_GET["ajouter"])): ?>
     <?php if ($isConnected): ?>
