@@ -5,7 +5,7 @@ $isConnected = isset($_SESSION["utilisateur_id"]);
 $id_page = isset($_GET["id_page"]) ? intval($_GET["id_page"]) : 3;
 $isAdmin = isset($_SESSION["role"]) && $_SESSION["role"] === "admin";
 
-//Traitement de la suppression commentaire
+// Traitement de la suppression commentaire
 if ($isConnected && $isAdmin && isset($_GET['supprimer'])) {
     $id_supp = intval($_GET['supprimer']);
     $pdo->prepare("DELETE FROM commentaires WHERE id_parent = ?")->execute([$id_supp]);
