@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["commentaire"])) {
     $contenu = $_POST["commentaire"];
     $id_parent = !empty($_POST["id_parent"]) ? intval($_POST["id_parent"]) : null;
     $stmt = $pdo->prepare("INSERT INTO commentaires (id_utilisateur, contenu, id_parent,id_page) VALUES (?, ?, ?,?)");
-    $stmt->execute([$_SESSION["utilisateur_id"], $contenu, $id_parent]);
+    $stmt->execute([$_SESSION["utilisateur_id"], $contenu, $id_parent, $id_page]);
 
     header("Location: " . $_SERVER['PHP_SELF'] . "?id_page=$id_page");
     exit();
