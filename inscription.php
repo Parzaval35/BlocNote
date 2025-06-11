@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->execute([$pseudo]);
         $user = $stmt->fetch();
         $Message = "<p style='color:green;'>Inscription réussie!</p>";
-	      echo '<meta http-equiv="refresh" content="3;url=index.php">';
+	      echo '<meta http-equiv="refresh" content="3;url=connexion.php">';
     } catch (PDOException $e) {
         $Message = "<p style='color:red;'>Erreur : " . $e->getMessage() . "</p>";
     }
