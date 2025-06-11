@@ -583,3 +583,55 @@ body.night-mode .tuto-section {
       font-size: 1.1em;
       line-height: 1.6em;
 }
+
+.block-img {
+      display: block;
+      margin: 0 auto 12px auto;
+      border-radius: 8px;
+      max-width: 150px;
+      height: auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    } 
+
+.mob-img {
+      display: block;
+      margin: 0 auto 12px auto;
+      border-radius: 8px;
+      max-width: 300px;
+      height: auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    } 
+
+.mob {
+       background-color: rgba(255, 255, 255, 0.274);
+        border-radius: 16px;
+       padding: 16px;
+       margin: 20px;
+       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+       text-align: justify;
+       transition: background 0.3s;
+       display: flex;
+  	flex-wrap: wrap;
+    }
+
+  .item-icon {
+      width: 24px;
+      height: 24px;
+      vertical-align: middle;
+      margin-right: 4px;
+    }
+
+.img {
+      display: block;
+      margin: 0 auto 12px auto;
+      border-radius: 8px;
+      min-width: 500px;
+      max-width: 500px;
+      height: auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    }
+
+.cœur {
+      width: 24px;
+      height: 24px;
+    }
