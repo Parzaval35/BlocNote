@@ -12,3 +12,10 @@ Une fois qu'on est connecté, en haut à droite apparait sur chaque pages un bou
 De plus, sur chaque page hormis la page d'accueil, on trouve en bas des pages une section commentaire différente pour chaque pages qui permet de laisser un commentaire lorsqu'on est connecté et également de répondre aux commentaires laissés par les autres utilisateurs.
 
 En bas de chaque page, on retrouve également un lien vers les pages de politique de confidentialité et mentions légales ainsi qu'un bouton retour en haut.
+
+# UTILISATION :
+
+1. Télécharger le code source en .zip
+2. Mettre le projet dans le dossier C:\xampp\htdocs\
+3. Décompresser le fichier et renommer le dossier "Blocnote"
+4. Allez dans ‪C:\xampp\htdocs\Blocnote\config.php et insérez votre mot de passe dans $password = ''
