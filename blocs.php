@@ -268,12 +268,12 @@ $commentaires = $stmt->fetchAll();
 <?php endif; ?>
 
 </section>
-<a href="#" class="top-link">Retour en haut</a>
+<a href="" class="top-link">Retour en haut</a>
   </main>
 
     <footer>
-      <a href="#politique-confidentialite">Politique de confidentialité</a> |
-      <a href="#mentions-legales">Mentions légales</a>
+      <a href="pc.php">Politique de confidentialité</a> |
+      <a href="ml.php">Mentions légales</a>
   </footer>
   <script src="script.js"></script>
   
