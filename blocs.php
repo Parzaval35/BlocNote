@@ -187,72 +187,78 @@ $commentaires = $stmt->fetchAll();
 </div>
 <section class="comment-section" id="commentaires">
   <h2>Commentaires</h2>
-<div class="comment-scroll">
-<ul>
-<?php foreach ($commentaires as $commentaire): ?>
-    <?php if ($commentaire["id_parent"] === null): ?>
-        <li>
-            <strong>Commentaire de <?= $commentaire["pseudo"] ?> : </strong><br><?= $commentaire["contenu"] ?>
-            <br>
-            <!-- Affichage des réponses -->
-            <?php foreach ($commentaires as $reponse): ?>
-                <?php if ($reponse["id_parent"] == $commentaire["id_commentaire"]): ?>
-                    <div style="margin-left:30px;">
-                        <strong>Réponse de <?= $reponse["pseudo"] ?> : </strong><br><?= $reponse["contenu"] ?>
-			<br>
-                    </div>
-                <?php endif; ?>
-            <?php endforeach; ?>
+  <div class="comment-scroll">
+    <ul>
+    <?php foreach ($commentaires as $commentaire): ?>
+        <?php if ($commentaire["id_parent"] === null): ?>
+            <li>
+                <strong>Commentaire de <?= $commentaire["pseudo"] ?> : </strong><br><?= $commentaire["contenu"] ?><br>
 
-            <!-- Lien Répondre -->
-            <a href="?repondre=<?= $commentaire['id_commentaire'] ?>&id_page=<?= $id_page ?>#commentaires" class="reponse-btn">Répondre</a>
+                <?php foreach ($commentaires as $reponse): ?>
+                    <?php if ($reponse["id_parent"] == $commentaire["id_commentaire"]): ?>
+                        <div style="margin-left:30px;">
+                            <strong>Réponse de <?= $reponse["pseudo"] ?> : </strong><br><?= $reponse["contenu"] ?><br>
+                            <?php if ($isAdmin): ?>
+                                <form method="get" style="display:inline;">
+                                    <input type="hidden" name="supprimer" value="<?= $reponse["id_commentaire"] ?>">
+                                    <input type="hidden" name="id_page" value="<?= $id_page ?>">
+                                    <button type="submit" class="supprimer-reponse-btn">Supprimer</button>
+                                </form>
+                            <?php endif; ?>
+                        </div>
+                    <?php endif; ?>
+                <?php endforeach; ?>
 
-            <!-- Formulaire réponse -->
-            <?php if (isset($_GET["repondre"]) && $_GET["repondre"] == $commentaire['id_commentaire']): ?>
-                <?php if ($isConnected): ?>
-                    <form method="post">
-                        <input type="hidden" name="id_parent" value="<?= $commentaire['id_commentaire'] ?>">
-                        <textarea name="commentaire" required></textarea><br>
-                        <button type="submit">Publier la réponse</button>
+                <a href="?repondre=<?= $commentaire['id_commentaire'] ?>&id_page=<?= $id_page ?>#commentaires" class="reponse-btn">Répondre</a>
+
+                <?php if ($isAdmin): ?>
+                    <form method="get" style="display:inline;">
+                        <input type="hidden" name="supprimer" value="<?= $commentaire["id_commentaire"] ?>">
+                        <input type="hidden" name="id_page" value="<?= $id_page ?>">
+                        <button type="submit" class="supprimer-commentaire-btn">Supprimer</button>
                     </form>
-                <?php else: ?>
-                    <p style="color:red;">Vous ne pouvez pas répondre au commentaire, connectez-vous ou inscrivez-vous.</p>
                 <?php endif; ?>
-            <?php endif; ?>
 
-        </li>
-        <br>
-    <?php endif; ?>
-<?php endforeach; ?>
-</ul>
-</div>
+                <?php if (isset($_GET["repondre"]) && $_GET["repondre"] == $commentaire['id_commentaire']): ?>
+                    <?php if ($isConnected): ?>
+                        <form method="post">
+                            <input type="hidden" name="id_parent" value="<?= $commentaire['id_commentaire'] ?>">
+                            <div class="form-buttons">
+                                <textarea name="commentaire" required></textarea><br>
+                                <button type="submit" class="publier-btn">Publier la réponse</button>
+                            </div>
+                        </form>
+                    <?php else: ?>
+                        <p style="color:red;">Vous ne pouvez pas répondre au commentaire, connectez-vous ou inscrivez-vous.</p>
+                    <?php endif; ?>
+                <?php endif; ?>
+            </li>
+            <br>
+        <?php endif; ?>
+    <?php endforeach; ?>
+    </ul>
+  </div>
 
-<!-- Ajouter un commentaire principal -->
-<a href="?ajouter=1&id_page=<?= $id_page ?>#commentaires" class="comment-btn">Ajouter un commentaire</a>
-<a href="?ajouter=1&id_page=<?= $id_page ?>#commentaires" class="suppr-btn">Supprimer un commentaire</a>
+  <!-- Ajouter un commentaire principal -->
+  <a href="?ajouter=1&id_page=<?= $id_page ?>#commentaires" class="comment-btn">Ajouter un commentaire</a>
 
-<?php if (isset($_GET["ajouter"])): ?>
-    <?php if ($isConnected): ?>
-        <form method="post">
-            <input type="hidden" name="id_parent" value="">
-	    <input type="hidden" name="id_page" value="2">
-            <textarea name="commentaire" required></textarea><br>
-            <button type="submit">Publier le commentaire</button>
-        </form>
-    <?php else: ?>
-        <p style="color:red;">Vous ne pouvez pas ajouter de commentaire, connectez-vous ou inscrivez-vous.</p>
-    <?php endif; ?>
-<?php endif; ?>
-
+  <?php if (isset($_GET["ajouter"])): ?>
+      <?php if ($isConnected): ?>
+          <form method="post">
+              <input type="hidden" name="id_parent" value="">
+              <input type="hidden" name="id_page" value="<?= $id_page ?>">
+              <div class="form-buttons">
+                  <textarea name="commentaire" required></textarea><br>
+                  <button type="submit" class="publier-btn">Publier le commentaire</button>
+              </div>
+          </form>
+      <?php else: ?>
+          <p style="color:red;">Vous ne pouvez pas ajouter de commentaire, connectez-vous ou inscrivez-vous.</p>
+      <?php endif; ?>
+  <?php endif; ?>
 </section>
-<a href="" class="top-link">Retour en haut</a>
-  </main>
-
-    <footer>
-      <a href="pc.php">Politique de confidentialité</a> |
-      <a href="ml.php">Mentions légales</a>
-  </footer>
-  <script src="script.js"></script>
-  
+    <a href="#" class="top-link">Retour en haut</a>
+    </main>
 </body>
+<script src="script.js"></script>
 </html>
