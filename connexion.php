@@ -8,8 +8,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $mot_de_passe = $_POST['mot_de_passe'];
 
     try {
-        $stmt = $pdo->prepare("SELECT * FROM utilisateurs WHERE pseudo = ?");
-        $stmt->execute([$pseudo]);
+        $stmt = $pdo->prepare("SELECT * FROM utilisateurs WHERE pseudo = ? AND WHERE mot_de_passe = ?");
+        $stmt-> execute([$pseudo, password_hash($mot_de_passe, PASSWORD_DEFAULT)]);
         $user = $stmt->fetch();
         $_SESSION['utilisateur_id'] = $user['id'];
         $_SESSION['pseudo'] = $user['pseudo'];
