@@ -54,7 +54,7 @@
 <body>
 
   <div class="tuto-section">
-  <h1 style="text-align: center; margin-bottom: 40px;">🚪 Tutoriels Redstone : La porte de Jeb</h1>
+  <h1 style="text-align: center; margin: 10px">🚪 Tutoriels Redstone : La porte de Jeb</h1>
   <h3> Suis ce tutoriel pour créer une porte secrète totalement indétectable !</h3>
   </div>
 
