@@ -155,7 +155,7 @@ $commentaires = $stmt->fetchAll();
 <?php endif; ?>
 
 </section>
-    <a href="#" class="top-link">Retour en haut</a>
+    <a href="" class="top-link">Retour en haut</a>
     </main>
 </body>
 <script src="script.js"></script>
