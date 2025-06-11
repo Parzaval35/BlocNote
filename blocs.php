@@ -56,30 +56,6 @@ $commentaires = $stmt->fetchAll();
             <a href="creatures.php">Mob</a>
             <a href="menu_tuto.php">Tutoriels</a>
      </nav>
-     <style>
-
-    .mob {
-       background-color: rgba(255, 255, 255, 0.274);
-        border-radius: 16px;
-       padding: 16px;
-       margin: 20px;
-       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-       text-align: justify;
-       transition: background 0.3s;
-       display: flex;
-  	flex-wrap: wrap;
-    }
-
-    
-    .mob-img {
-      display: block;
-      margin: 0 auto 12px auto;
-      border-radius: 8px;
-      max-width: 150px;
-      height: auto;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    } 
-    </style>
   </header>
 
   <main>
@@ -96,7 +72,7 @@ $commentaires = $stmt->fetchAll();
 
     <article class="mob">
       <h3>Pierre</h3>
-      <img src="images/stone.png" alt="Pierre" class="mob-img">
+      <img src="images/stone.png" alt="Pierre" class="block-img">
       <ul>
         <li><strong>Obtention :</strong> En minant avec une pioche, donne de la cobblestone.</li>
         <li><strong>Utilisation :</strong> Construction, craft de four, outils en pierre.</li>
@@ -106,7 +82,7 @@ $commentaires = $stmt->fetchAll();
 
     <article class="mob">
       <h3>Terre</h3>
-      <img src="images/dirt.webp" alt="Terre" class="mob-img">
+      <img src="images/dirt.webp" alt="Terre" class="block-img">
       <ul>
         <li><strong>Obtention :</strong> À la pelle, omniprésente dans les plaines et forêts.</li>
         <li><strong>Utilisation :</strong> Plantation, remplissage de trous.</li>
@@ -116,7 +92,7 @@ $commentaires = $stmt->fetchAll();
 
 <article class="mob">
   <h3>Bois</h3>
-  <img src="images/bois.png" alt="Bois" class="mob-img">
+  <img src="images/bois.png" alt="Bois" class="block-img">
   <ul>
     <li><strong>Obtention :</strong> Coupé sur les arbres.</li>
     <li><strong>Utilisation :</strong> Construction, crafting de planches et outils.</li>
@@ -133,7 +109,7 @@ $commentaires = $stmt->fetchAll();
 
     <article class="mob">
       <h3>Fer</h3>
-      <img src="images/fer.webp" alt="Minerai de fer" class="mob-img">
+      <img src="images/fer.webp" alt="Minerai de fer" class="block-img">
       <ul>
         <li><strong>Obtention :</strong> Miné avec une pioche en pierre ou supérieure.</li>
         <li><strong>Utilisation :</strong> Fonte pour obtenir du fer utilisable en crafting.</li>
@@ -143,7 +119,7 @@ $commentaires = $stmt->fetchAll();
 
     <article class="mob">
       <h3>Diamant</h3>
-      <img src="images/diamant.png" alt="Minerai de diamant" class="mob-img">
+      <img src="images/diamant.png" alt="Minerai de diamant" class="block-img">
       <ul>
         <li><strong>Obtention :</strong> Miné avec une pioche en fer ou supérieure.</li>
         <li><strong>Utilisation :</strong> Fabrication des outils et armures les plus résistants.</li>
@@ -153,7 +129,7 @@ $commentaires = $stmt->fetchAll();
 
     <article class="mob">
       <h3>Or</h3>
-      <img src="images/or.webp" alt="Minerai d’or" class="mob-img">
+      <img src="images/or.webp" alt="Minerai d’or" class="block-img">
       <ul>
         <li><strong>Obtention :</strong> Miné avec une pioche en fer ou supérieure.</li>
         <li><strong>Utilisation :</strong> Fonte pour obtenir de l’or, utilisé en objets décoratifs et redstone.</li>
@@ -163,7 +139,7 @@ $commentaires = $stmt->fetchAll();
 
     <article class="mob">
       <h3>Charbon</h3>
-      <img src="images/charbon.png" alt="Minerai de charbon" class="mob-img">
+      <img src="images/charbon.png" alt="Minerai de charbon" class="block-img">
       <ul>
         <li><strong>Obtention :</strong> Miné avec n’importe quelle pioche.</li>
         <li><strong>Utilisation :</strong> Combustible pour fours, crafting de torches.</li>
@@ -180,7 +156,7 @@ $commentaires = $stmt->fetchAll();
 
     <article class="mob">
       <h3>Table de Craft</h3>
-      <img src="images/crafting_table.webp" alt="crafting_table" class="mob-img">
+      <img src="images/crafting_table.webp" alt="crafting_table" class="block-img">
       <ul>
         <li><strong>Obtention :</strong> Se craft avec 4 planches.</li>
         <li><strong>Utilisation :</strong> Permet de crafter des items et des blocs.</li>
@@ -190,7 +166,7 @@ $commentaires = $stmt->fetchAll();
 
     <article class="mob">
       <h3>Four</h3>
-      <img src="images/furnace.png" alt="Four" class="mob-img">
+      <img src="images/furnace.png" alt="Four" class="block-img">
       <ul>
         <li><strong>Obtention :</strong> Craft avec de la cobblestone.</li>
         <li><strong>Utilisation :</strong> Faire cuire aliments, minerais.</li>
@@ -200,7 +176,7 @@ $commentaires = $stmt->fetchAll();
 
     <article class="mob">
       <h3>Coffre</h3>
-      <img src="images/chest.webp" alt="Coffre" class="mob-img">
+      <img src="images/chest.webp" alt="Coffre" class="block-img">
       <ul>
         <li><strong>Utilité :</strong> Stocker jusqu'à 27 objets.</li>
         <li><strong>Double Coffre :</strong> Deux coffres côte à côte forment un grand coffre.</li>
