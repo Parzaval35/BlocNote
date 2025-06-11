@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     try {
         $stmt = $pdo->prepare("INSERT INTO utilisateurs (pseudo, email, mot_de_passe) VALUES (?, ?, ?)");
         $stmt->execute([$pseudo, $email, $mot_de_passe]);
-	$stmt = $pdo->prepare("SELECT * FROM utilisateurs WHERE pseudo = ?");
+	      $stmt = $pdo->prepare("SELECT * FROM utilisateurs WHERE pseudo = ?");
         $stmt->execute([$pseudo]);
         $user = $stmt->fetch();
         $Message = "<p style='color:green;'>Inscription réussie!</p>";
