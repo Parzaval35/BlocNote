@@ -58,7 +58,7 @@
         </section>
 
         <section id="dernieres-maj">
-            <h2>Dernière MàJ / Actualités</h2>
+            <h2>Actualités</h2>
             <article>
                 <h3>Minecraft 1.21 – Update "Trial Chambers"</h3>
                 <p><strong>Date :</strong> Juin 2025</p>
