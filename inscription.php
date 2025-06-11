@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	      $stmt = $pdo->prepare("SELECT * FROM utilisateurs WHERE pseudo = ?");
         $stmt->execute([$pseudo]);
         $user = $stmt->fetch();
-        $Message = "<p style='color:green;'>Inscription réussie!</p>";
+        $Message = "<p style='color:#0066cc;'>Inscription réussie!</p>";
 	      echo '<meta http-equiv="refresh" content="3;url=connexion.php">';
     } catch (PDOException $e) {
         $Message = "<p style='color:red;'>Erreur : " . $e->getMessage() . "</p>";
