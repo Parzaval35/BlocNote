@@ -100,7 +100,7 @@ input[type="submit"]:hover {
 }
 
 body.night-mode .box2 {
-  background: #444444;  /* ou remplace par #333333 si tu veux plus foncé */
+  background: #444444;
   color: #f0f0f0;
   box-shadow: 0 8px 20px rgba(255, 255, 255, 0.05);
 }
@@ -115,9 +115,9 @@ body {
     background-image: url('images/fond jour.webp');
     background-size: cover;          
     background-repeat: no-repeat;
-    background-position: center top;   /* ou "center center" */
-    background-attachment: fixed;      /* ⬅️ garde l’image fixe au scroll */
-    background-color: #000;            /* au cas où l’image ne prend pas tout */
+    background-position: center top;
+    background-attachment: fixed;
+    background-color: #000;
 
 }
 
@@ -247,7 +247,6 @@ footer a:hover {
   margin-top: 10px;
 }
 
-/* Bouton Publier (commentaire ou réponse) */
 .publier-btn {
   background-color: #28a745;
   color: white;
@@ -264,7 +263,6 @@ footer a:hover {
   background-color: #1e7e34;
 }
 
-/* Bouton Répondre */
 .reponse-btn {
   display: inline-block;
   text-decoration: none;
@@ -284,7 +282,6 @@ footer a:hover {
   background-color: #004a99;
 }
 
-/* Bouton Ajouter commentaire */
 .comment-btn {
   display: inline-block;
   text-decoration: none;
@@ -302,7 +299,6 @@ footer a:hover {
   background-color: #004a99;
 }
 
-/* Supprimer un commentaire principal */
 button.supprimer-commentaire-btn {
   display: inline-block;
   text-decoration: none;
@@ -321,7 +317,6 @@ button.supprimer-commentaire-btn:hover {
   background-color: #990000;
 }
 
-/* Supprimer une réponse */
 button.supprimer-reponse-btn {
   display: inline-block;
   text-decoration: none;
@@ -411,7 +406,6 @@ body.night-mode footer a {
     margin: 0 10px;
 }
 
-/* Bouton de l'accordéon */
 .accordion-btn {
   background-color: #5961d3;
   color: white;
