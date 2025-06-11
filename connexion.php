@@ -8,18 +8,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $mot_de_passe = $_POST['mot_de_passe'];
 
     try {
-        $stmt = $pdo->prepare("SELECT * FROM utilisateurs WHERE pseudo = ? AND WHERE mot_de_passe = ?");
-        $stmt-> execute([$pseudo, password_hash($mot_de_passe, PASSWORD_DEFAULT)]);
+        $stmt = $pdo->prepare("SELECT * FROM utilisateurs WHERE pseudo = ?");
+        $stmt->execute([$pseudo]);
         $user = $stmt->fetch();
-        $_SESSION['utilisateur_id'] = $user['id'];
-        $_SESSION['pseudo'] = $user['pseudo'];
-        $_SESSION['role'] = $user['role'] ?? 'utilisateur';
-        $Message = "<p style='color:green;'>Connexion réussie !</p>";
-        echo '<meta http-equiv="refresh" content="3;url=index.php">';
+        if ($user && password_verify($mot_de_passe, $user['mot_de_passe'])) {
+            $_SESSION['utilisateur_id'] = $user['id'];
+            $_SESSION['pseudo'] = $user['pseudo'];
+            $_SESSION['role'] = $user['role'] ?? 'utilisateur';
+            $Message = "<p style='color:green;'>Connexion réussie !</p>";
+            echo '<meta http-equiv="refresh" content="3;url=index.php">';
+        } else {
+            $Message = "<p style='color:red;'>Pseudo ou mot de passe incorrect.</p>";
+        }
     } catch (PDOException $e) {
         $Message = "<p style='color:red;'>Erreur lors de la connexion : " . htmlspecialchars($e->getMessage()) . "</p>";
     }
 }
+
 ?>
 <!DOCTYPE HTML>
 <head>
