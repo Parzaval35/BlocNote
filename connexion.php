@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['utilisateur_id'] = $user['id'];
             $_SESSION['pseudo'] = $user['pseudo'];
             $_SESSION['role'] = $user['role'] ?? 'utilisateur';
-            $Message = "<p style='color:green;'>Connexion réussie !</p>";
+            $Message = "<p style='color:#0066cc;'>Connexion réussie !</p>";
             echo '<meta http-equiv="refresh" content="3;url=index.php">';
         } else {
             $Message = "<p style='color:red;'>Pseudo ou mot de passe incorrect.</p>";
