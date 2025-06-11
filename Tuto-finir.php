@@ -54,7 +54,7 @@
 <body>
 
   <div class="tuto-section">
-  <h1 style="text-align: center; margin-bottom: 40px;">🛠️ Tutoriels pour finir Minecraft</h1>
+  <h1 style="text-align: center; margin: 10px">🛠️ Tutoriels pour finir Minecraft</h1>
   </div>
 
   <div class="tuto-section">
