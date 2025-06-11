@@ -243,71 +243,102 @@ footer a:hover {
     background-color: #004a99;
 }
 
-.comment-section button[type="submit"] {
-    background-color: #28a745;         
-    color: white;
-    border: none;
-    padding: 6px 10px;                 
-    border-radius: 4px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-size: 14px;
-}
-
-.comment-section button[type="submit"]:hover {
-    background-color: #1e7e34;         
-}
-
-.reponse-btn {
-  display: inline-block;
-  text-decoration: none; 
-  background-color: #0066cc;
-  color: white;
-  border: none;
-  font-size:13px;
-    padding: 4px 7px;
-    border-radius: 4px;
-    font-weight: bold;
-   cursor: pointer;
-  transition: background-color 0.3s ease;
+.form-buttons {
   margin-top: 10px;
 }
 
-.suppr-btn {
-  display: inline-block;
-  text-decoration: none; 
-  background-color: #cc0000;
+/* Bouton Publier (commentaire ou réponse) */
+.publier-btn {
+  background-color: #28a745;
   color: white;
   border: none;
-  font-size:13px;
-    padding: 4px 7px;
-    border-radius: 4px;
-    font-weight: bold;
-   cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+}
+
+.publier-btn:hover {
+  background-color: #1e7e34;
+}
+
+/* Bouton Répondre */
+.reponse-btn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  font-size: 13px;
+  padding: 4px 7px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
   transition: background-color 0.3s ease;
   margin-top: 10px;
 }
 
 .reponse-btn:hover {
-    background-color: #004a99;
+  background-color: #004a99;
 }
 
+/* Bouton Ajouter commentaire */
 .comment-btn {
   display: inline-block;
-  text-decoration: none; 
+  text-decoration: none;
   background-color: #0066cc;
   color: white;
   border: none;
-    padding: 6px 10px;
-    border-radius: 4px;
-    font-weight: bold;
-   cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .comment-btn:hover {
-    background-color: #004a99;
+  background-color: #004a99;
+}
+
+/* Supprimer un commentaire principal */
+button.supprimer-commentaire-btn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #cc0000;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 10px;
+}
+
+button.supprimer-commentaire-btn:hover {
+  background-color: #990000;
+}
+
+/* Supprimer une réponse */
+button.supprimer-reponse-btn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #cc0000;
+  color: white;
+  border: none;
+  font-size: 13px;
+  padding: 4px 7px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 5px;
+}
+
+button.supprimer-reponse-btn:hover {
+  background-color: #990000;
 }
 
 input {
